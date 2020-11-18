@@ -1,5 +1,6 @@
 ---
-title: Welcome
+title: Getting started
+sectionid: get-started
 ---
 
 ## Getting started
