@@ -1,0 +1,62 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container navbar-container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a class="navbar-brand" href="{{ site.baseurl }}/">
+                <span><img src="{{ "/assets/img/logo.png" | relative_url }}" alt="Logo"></span> {{ site.title }}
+            </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+                    <li {% if page.sectionid=='get-started' %} class="active" {% endif %}><a href="{{ "/docs/home" | relative_url }}">Get Started</a></li>
+                    <li {% if page.sectionid=='updates' %} class="active" {% endif %}><a href="{{ "/docs/updates" | relative_url }}">Updates</a></li>
+                    <li>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="true">
+                        Datasets <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a href="{{ "/docs/dataset_overview/" | relative_url }}">Overview</a></li>
+                          <li class="divider"></li>
+                          <li><a href="{{ "/docs/nodeprop/" | relative_url }}">Node Property Prediction</a></li>
+                          <li class="divider"></li>
+                          <li><a href="{{ "/docs/linkprop/" | relative_url }}">Link Property Prediction</a></li>
+                          <li class="divider"></li>
+                          <li><a href="{{ "/docs/graphprop/" | relative_url }}">Graph Property Prediction</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        Leaderboards
+                        <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a href="{{ "/docs/leader_overview/" | relative_url }}">Overview</a></li>
+                          <li class="divider"></li>
+                          <li><a href="{{ "/docs/leader_rules/" | relative_url }}">Rules</a></li>
+                          <li class="divider"></li>
+                          <li><a href="{{ "/docs/leader_nodeprop/" | relative_url }}">Node Property Prediction</a></li>
+                          <li class="divider"></li>
+                          <li><a href="{{ "/docs/leader_linkprop/" | relative_url }}">Link Property Prediction</a></li>
+                          <li class="divider"></li>
+                          <li><a href="{{ "/docs/leader_graphprop/" | relative_url }}">Graph Property Prediction</a></li>
+                        </ul>
+                    </li>
+                    <li {% if page.sectionid=='paper' %} class="active" {% endif %}><a href="{{ site.paper_address }}">Paper</a></li>
+                    <li {% if page.sectionid=='team' %} class="active" {% endif %}><a href="{{ "/docs/team" | relative_url }}">Team</a></li>
+                    <li {% if page.sectionid=='github' %} class="active" {% endif %}>
+                        <a href="{{ site.git_address }}">
+                        Github
+                        <i class="fa fa-github" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
