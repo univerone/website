@@ -1,0 +1,19 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+        <h5> 
+            <a href="{{ include.link }}">{{ include.title }}</a>
+        </h5>
+        <div style="font-size: 1.5rem;">
+            {{ include.authors }} <br>
+            <em>{{ include.journal }}</em>
+        </div>
+        <a class="btn btn-default" href="{{ include.link }}" role="button">Link</a>
+        <a class="btn btn-default" href="{{ include.pdf }}" role="button">PDF</a>
+        <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#{{ include.id }}" aria-expanded="false" aria-controls="{{ include.id }}">CITE</button>
+        <div class="collapse" id="{{ include.id }}">
+            <div class="well" style="font-size: 1.5rem;">
+              {{ include.citation | newline_to_br }}
+            </div>
+          </div>
+    </div>
+</div>

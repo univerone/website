@@ -4,54 +4,121 @@ layout: default
 
 <div class="header-container jumbotron">
     <div class="container">
-        <h1>{{ site.title}}</h1>
+        <h1 style="font-family: 'Fraunces', serif;">{{ site.title}}</h1>
         <p>
             {{ site.description}}
         </p>
-        <p><a class="btn btn-primary btn-lg" href="{{ "/docs/home/" | relative_url }}" role="button">Learn more</a></p>
+        <p><a class="btn btn-primary btn-lg" href="{{ " /docs/home/" | relative_url }}" role="button">Learn more</a></p>
     </div>
 </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-8">
-            <h2 class="header-light regular-pad">What is MLModelCI?</h2>
-              <p class="lead">
-                  Jekyll is a simple, blog-aware, static site generator. It takes a template
-              directory containing raw text files in various formats, runs it through
-              a converter (like <a href="https://daringfireball.net/projects/markdown/">Markdown</a>)
-              and our <a href="https://github.com/Shopify/liquid/wiki">Liquid</a> renderer, and
-              spits out a complete, ready-to-publish static website suitable
-              for serving with your favorite web server. Jekyll also happens to be the engine
-              behind <a href="https://pages.github.com">GitHub Pages</a>, which means you can use Jekyll
-              to host your project’s page, blog, or website from GitHub’s servers <strong>for
-              free</strong>.</p>
+<section>
+    <div class="container">
+        <div class="text-center" style="font-family: 'Yusei Magic', sans-serif;">
+            <h2>What is MLModelCI?</h2>
         </div>
-        <div class="col-md-4 text-center">
-            <img src="{{ "/assets/img/logo.png" | relative_url }}" alt="Jekyll logo" class="img-responsive">
+        <div class="row">
+            <div class="col-md-10">
+                <p class="lead">
+                    MLModelCI provides multimedia researchers and developers with a one-stop platform for efficient
+                    machine learning (ML) services.
+                    <br>
+                    The system leverages DevOps techniques to optimize, test, and manage models. It also containerizes
+                    and deploys these optimized and validated models as cloud services (MLaaS).
+                    <br>
+                    You just need to register your models to our platform and it will take over the rest tasks..
+                </p>
+            </div>
+            <div class="col-md-2 text-center">
+                <img src="{{ "/assets/img/logo.png" | relative_url }}" alt="modelci logo" class="img-responsive">
+            </div>
         </div>
     </div>
-    <hr>
-    <div class="row">
+</section>
+
+<section>
+    <div class="container">
+        <div class="text-center" style="font-family: 'Yusei Magic', sans-serif;">
+            <h2>MLModelCI Workflow</h2>
+        </div>
+    
+        <img style="width: 100%;" src="{{ "/assets/img/modelci_workflow.svg" | relative_url }}" alt="modelci workflow"
+            class="img-responsive">
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-3 section-title" style="font-family: 'Yusei Magic', sans-serif;">
+                <h2 class="text-center">Publications</h2>
+            </div>
+            <div class="col-12 col-md-9">
+                {% include publication.html 
+                    title="InferBench: Understanding Deep Learning Inference Serving with an Automatic Benchmarking System."
+                    authors="H Zhang, Y Huang, Y Wen, J Yin, K Guan. (2020)"
+                    journal="arXiv preprint arXiv:2011.02327"
+                    link="https://arxiv.org/abs/2011.02327"
+                    pdf="https://arxiv.org/pdf/2011.02327"
+                    id="inferbench" 
+                    citation="
+                    @misc{zhang2020inferbench,
+                        title={InferBench: Understanding Deep Learning Inference Serving with an Automatic Benchmarking System},
+                        author={Huaizheng Zhang and Yizheng Huang and Yonggang Wen and Jianxiong Yin and Kyle Guan. 2020.},
+                        year={2020},
+                        eprint={2011.02327},
+                        archivePrefix={arXiv},
+                        primaryClass={cs.LG}
+                    }"  %}
+
+                    {% include publication.html 
+                        title="MLModelCI: An Automatic Cloud Platform for Efficient MLaaS."
+                        authors="H Zhang, Y Li, Y Huang, Y Wen, J Yin, K Guan. (2020)"
+                        link="https://doi.org/10.1145/3394171.3414535"
+                        pdf="https://arxiv.org/pdf/2006.05096"
+                        id="mlmodelci" 
+                        journal="Proceedings of the 28th ACM International Conference on Multimedia, 4453--4456"
+                        citation="
+                        @inproceedings{10.1145/3394171.3414535,
+                            author = {Zhang, Huaizheng and Li, Yuanming and Huang, Yizheng and Wen, Yonggang and Yin, Jianxiong and Guan, Kyle},
+                            title = {MLModelCI: An Automatic Cloud Platform for Efficient MLaaS},
+                            year = {2020},
+                            url = {https://doi.org/10.1145/3394171.3414535},
+                            doi = {10.1145/3394171.3414535},
+                            booktitle = {Proceedings of the 28th ACM International Conference on Multimedia},
+                            pages = {4453–4456},
+                            numpages = {4},
+                            location = {Seattle, WA, USA},
+                            series = {MM '20}
+                          }"  %}
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- <div class="row">
         <div class="col-sm-4">
             <h1 class="text-center"><i class="fa fa-home" aria-hidden="true"></i></h1>
             <h3 class="text-center">Housekeeper</h3>
             <p>
-                Housekeeper provides a refined management for model (service) registration, deletion, update and selection.
+                Housekeeper provides a refined management for model (service) registration, deletion, update and
+                selection.
             </p>
         </div>
         <div class="col-sm-4">
             <h1 class="text-center"><i class="fa fa-exchange" aria-hidden="true"></i></h1>
             <h3 class="text-center">Converter</h3>
             <p>
-                Converter is designed to convert models to serialized and optimized formats so that the models can be deployed to cloud.
+                Converter is designed to convert models to serialized and optimized formats so that the models can be
+                deployed to cloud.
             </p>
         </div>
         <div class="col-sm-4">
             <h1 class="text-center"><i class="fa fa-user" aria-hidden="true"></i></h1>
             <h3 class="text-center">Profiler</h3>
             <p>
-                Profiler simulates the real service behavior by invoking a gRPC client and a model service, and provides a detailed report about model runtime performance (e.g. P99-latency and throughput) in production environment.
+                Profiler simulates the real service behavior by invoking a gRPC client and a model service, and provides
+                a detailed report about model runtime performance (e.g. P99-latency and throughput) in production
+                environment.
             </p>
         </div>
     </div>
@@ -60,16 +127,17 @@ layout: default
             <h1 class="text-center"><i class="fa fa-pencil" aria-hidden="true"></i></h1>
             <h3 class="text-center">Dispatcher</h3>
             <p>
-                Dispatcher launches a serving system to load a model in a containerized manner and dispatches the MLaaS to a device.
+                Dispatcher launches a serving system to load a model in a containerized manner and dispatches the MLaaS
+                to a device.
             </p>
         </div>
         <div class="col-sm-4">
             <h1 class="text-center"><i class="fa fa-cogs" aria-hidden="true"></i></h1>
             <h3 class="text-center">Controller</h3>
             <p>
-                Controller receives data from the monitor and node exporter, and controls the whole workflow of our system.
+                Controller receives data from the monitor and node exporter, and controls the whole workflow of our
+                system.
             </p>
         </div>
-    </div>
-    <hr>
+    </div> -->
 </div>
